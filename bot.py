@@ -71,8 +71,7 @@ async def list_alerts(message: types.Message):
         await message.answer("⛔ У вас немає активних алертів.")
         return
 
-    text = "📋 Ваші алерти:
-"
+    text = "📋 Ваші алерти:"
     for idx, alert in enumerate(alerts, 1):
         text += f"{idx}. {alert.symbol} ≥ {alert.price} ({alert.exchange})\n"
     await message.answer(text)
